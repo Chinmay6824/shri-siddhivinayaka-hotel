@@ -1,16 +1,19 @@
+import fs from 'node:fs'
+
 /** @type {import('next').NextConfig} */
 const isGithubActions = process.env.GITHUB_ACTIONS === 'true'
+const hasCname = fs.existsSync('./public/CNAME')
+
 let repo = ''
 if (process.env.GITHUB_REPOSITORY) {
   repo = process.env.GITHUB_REPOSITORY.split('/')[1] || ''
 }
 
-// When building on GitHub Actions for GitHub Pages, if repo is not <user>.github.io,
-// use repo name as basePath unless explicitly overridden by BASE_PATH
+// When using a custom domain (CNAME file present) or <user>.github.io, basePath is empty (root)
 const isUserPage = repo.toLowerCase().endsWith('.github.io')
 const basePath = process.env.BASE_PATH !== undefined 
   ? process.env.BASE_PATH 
-  : (isGithubActions && !isUserPage && repo ? `/${repo}` : '')
+  : (!hasCname && isGithubActions && !isUserPage && repo ? `/${repo}` : '')
 
 const nextConfig = {
   output: 'export',

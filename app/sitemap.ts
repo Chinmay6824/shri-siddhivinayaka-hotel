@@ -6,9 +6,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: 'https://shri-siddhivinayaka-home-food.vercel.app',
+      url: 'https://shri-siddhivinayaka-home-food.com',
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'weekly',
       priority: 1,
     },
   ]

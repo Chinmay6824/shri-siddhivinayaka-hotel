@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
 
   return {
     rules: { userAgent: '*', allow: '/' },
-    sitemap: 'https://shri-siddhivinayaka-home-food.vercel.app/sitemap.xml',
+    sitemap: 'https://shri-siddhivinayaka-home-food.com/sitemap.xml',
   }
 }
