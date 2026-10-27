@@ -270,7 +270,7 @@ h2 em { font-weight: 400; }
 /* Mobile Quick Action Bar (Floating at bottom on mobile) */
 .mobile-quick-bar { display: none; }
 
-@media (max-width: 767px) {
+@media (max-width: 860px) {
   html { scroll-padding-top: 80px; }
   body { padding-bottom: calc(64px + env(safe-area-inset-bottom, 0px)); }
 
