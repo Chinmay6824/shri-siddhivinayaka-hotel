@@ -6,7 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return [
     {
-      url: 'https://shri-siddhivinayaka-home-food.com',
+      url: 'https://shri-siddhivinayaka-hotel.github.io',
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 1,

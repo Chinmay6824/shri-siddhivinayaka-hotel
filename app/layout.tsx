@@ -7,7 +7,7 @@ const sans = DM_Sans({ subsets: ['latin'], variable: '--font-dm-sans', display: 
 const serif = Cormorant_Garamond({ subsets: ['latin'], weight: ['400', '500', '600', '700'], style: ['normal', 'italic'], variable: '--font-cormorant', display: 'swap' })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://shri-siddhivinayaka-home-food.com'),
+  metadataBase: new URL('https://shri-siddhivinayaka-hotel.github.io'),
   title: 'Shri Siddhivinayaka Hotel & Home Food | Best Hotel & Seafood in Gokarna',
   description:
     'Discover Shri Siddhivinayaka Hotel & Home Food in Ganjigadde, Gokarna. Rated for authentic coastal seafood thalis, kingfish fry, homestay ambience, and warm Karavali hospitality.',
