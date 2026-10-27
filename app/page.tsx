@@ -3,6 +3,7 @@ import { Hero } from '@/components/restaurant/hero'
 import { FoodGallery } from '@/components/restaurant/food-gallery'
 import { GokarnaGuide, HotelFaq } from '@/components/restaurant/hotel-guide-faq'
 import { OurStory, SiteFooter, TheStayAmbience, VisitUs } from '@/components/restaurant/restaurant-sections'
+import { MobileQuickBar } from '@/components/restaurant/mobile-quick-bar'
 import { hotelFaqs, restaurant } from '@/lib/restaurant'
 
 const hotelStructuredData = {
@@ -95,6 +96,7 @@ export default function Page() {
         <VisitUs />
       </main>
       <SiteFooter />
+      <MobileQuickBar />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(hotelStructuredData).replace(/</g, '\\u003c') }}
