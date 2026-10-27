@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { ArrowDown, ArrowUpRight, CookingPot, Heart, MapPin, MessageCircle, Sprout } from 'lucide-react'
 import { buttonVariants } from '@/components/ui/button'
-import { restaurant } from '@/lib/restaurant'
+import { restaurant, getAssetPath } from '@/lib/restaurant'
 import { cn } from '@/lib/utils'
 
 const comforts = [
@@ -29,7 +29,7 @@ export function Hero() {
         </div>
         <figure className="hero-visual">
           <div className="hero-image-frame">
-            <Image src="/images/food/kingfish-thali.jpg" alt="Kingfish thali with fish curry, rice, chapati, fish fry, and sabji" fill priority sizes="(max-width: 767px) 90vw, (max-width: 1200px) 46vw, 590px" className="hero-image" />
+            <Image src={getAssetPath('/images/food/kingfish-thali.jpg')} alt="Kingfish thali with fish curry, rice, chapati, fish fry, and sabji" fill priority sizes="(max-width: 767px) 90vw, (max-width: 1200px) 46vw, 590px" className="hero-image" />
           </div>
           <div className="hospitality-seal" aria-hidden="true">
             <span>Simple food.</span><Sprout strokeWidth={1.15} /><span>Full hearts.</span>

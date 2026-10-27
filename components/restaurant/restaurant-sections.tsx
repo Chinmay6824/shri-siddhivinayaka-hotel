@@ -5,7 +5,7 @@ import { useState } from 'react'
 import { ArrowUpRight, Clock, MapPin, MessageCircle, MoveUpRight, Phone, Sprout } from 'lucide-react'
 import { Brand } from '@/components/restaurant/brand'
 import { buttonVariants } from '@/components/ui/button'
-import { navigation, restaurant, venueImages } from '@/lib/restaurant'
+import { getAssetPath, navigation, restaurant, venueImages } from '@/lib/restaurant'
 import { cn } from '@/lib/utils'
 
 export function OurStory() {
@@ -155,7 +155,7 @@ export function VisitUs() {
         <div className="visit-details">
           <figure className="venue-photo-card">
             <Image
-              src="/images/venue/entrance.jpg"
+              src={getAssetPath('/images/venue/entrance.jpg')}
               alt="Exterior of Shri Siddhivinayaka Home Food surrounded by coconut palms"
               width={900}
               height={675}

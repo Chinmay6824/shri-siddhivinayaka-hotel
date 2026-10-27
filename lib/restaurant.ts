@@ -68,6 +68,12 @@ export const hotelFaqs = [
 ] as const
 
 
+export const getAssetPath = (path: string): string => {
+  const base = process.env.NEXT_PUBLIC_BASE_PATH || ''
+  if (!base || path.startsWith(base)) return path
+  return `${base}${path.startsWith('/') ? path : `/${path}`}`
+}
+
 export interface GalleryItem {
   id: string
   src: string
@@ -82,7 +88,7 @@ export interface GalleryItem {
 export const galleryImages: GalleryItem[] = [
   {
     id: 'silver-fish-fry',
-    src: '/images/food/silver-fish-fry.jpg',
+    src: getAssetPath('/images/food/silver-fish-fry.jpg'),
     alt: 'Crispy silver fish fry arranged on a banana leaf with onion rings',
     title: 'Silver fish fry',
     caption: 'Golden, crisp, and made for a coastal lunch.',
@@ -92,7 +98,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: 'prawns-fry',
-    src: '/images/food/prawns-fry.jpg',
+    src: getAssetPath('/images/food/prawns-fry.jpg'),
     alt: 'Crispy prawns fry served with lime and onion on a banana leaf',
     title: 'Prawns fry',
     caption: 'A little crunch, a lot of coastal flavour.',
@@ -102,7 +108,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: 'kingfish-thali',
-    src: '/images/food/kingfish-thali.jpg',
+    src: getAssetPath('/images/food/kingfish-thali.jpg'),
     alt: 'Kingfish thali with fish curry, rice, chapati, fish fry, and sabji',
     title: 'Kingfish thali',
     caption: 'A complete coastal meal, served with care.',
@@ -112,7 +118,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: 'fish-fry',
-    src: '/images/food/fish-fry.jpg',
+    src: getAssetPath('/images/food/fish-fry.jpg'),
     alt: 'Two crispy fish fry pieces arranged on a banana leaf with sliced onion',
     title: 'Fresh Catch Fish fry',
     caption: 'Simple, crisp, and deeply satisfying.',
@@ -122,7 +128,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: 'pomfret-fry',
-    src: '/images/food/pomfret-fry.jpg',
+    src: getAssetPath('/images/food/pomfret-fry.jpg'),
     alt: 'Pomfret fry served on a red plate with lime, onion, and green chillies',
     title: 'Pomfret fry',
     caption: 'A coastal classic with a bright finish.',
@@ -132,7 +138,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: 'mackerel-rava-fry',
-    src: '/images/food/mackerel-rava-fry.jpg',
+    src: getAssetPath('/images/food/mackerel-rava-fry.jpg'),
     alt: 'Crispy rava fish fry served on a fresh banana leaf with lime slices',
     title: 'Crispy Rava Fish Fry',
     caption: 'Crunchy semolina crust, succulent fresh fish inside.',
@@ -142,7 +148,7 @@ export const galleryImages: GalleryItem[] = [
   },
   {
     id: 'spiced-chicken-fry',
-    src: '/images/food/spiced-chicken-fry.jpg',
+    src: getAssetPath('/images/food/spiced-chicken-fry.jpg'),
     alt: 'Spiced fried chicken pieces served on a banana leaf with lime and onion',
     title: 'Spiced chicken fry',
     caption: 'Richly spiced, crisp at the edges, tender inside.',
@@ -154,19 +160,19 @@ export const galleryImages: GalleryItem[] = [
 
 export const venueImages = [
   {
-    src: '/images/venue/entrance.jpg',
+    src: getAssetPath('/images/venue/entrance.jpg'),
     alt: 'Exterior view of Shri Siddhivinayaka Home Food entrance surrounded by green coconut palms',
     title: 'Our Home in Ganjigadde',
     caption: 'Tucked amid coastal coconut palms in peaceful Ganjigadde, Gokarna.',
   },
   {
-    src: '/images/venue/evening-ambience.jpg',
+    src: getAssetPath('/images/venue/evening-ambience.jpg'),
     alt: 'Evening lighting at Shri Siddhivinayaka Home Food with outdoor dining tables',
     title: 'Evening Veranda & Dining',
     caption: 'A calm, breezy coastal atmosphere for slow evening dinners with family.',
   },
   {
-    src: '/images/venue/dining-area.jpg',
+    src: getAssetPath('/images/venue/dining-area.jpg'),
     alt: 'Dining setup inside Shri Siddhivinayaka Home Food',
     title: 'Homestyle Hospitality',
     caption: 'Casual, welcoming open-air dining where every guest feels right at home.',
