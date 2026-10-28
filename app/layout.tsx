@@ -69,6 +69,9 @@ export const metadata: Metadata = {
     images: ['/images/food/kingfish-thali.jpg'],
   },
   icons: { icon: { url: '/icon.svg', type: 'image/svg+xml' } },
+  verification: {
+    google: 'f5dA2wtguVdCATZWaXbGlIY0-GOaUjCE279WtfOmQLA',
+  },
 }
 
 export const viewport: Viewport = { colorScheme: 'light', themeColor: '#f8f6ef', width: 'device-width', initialScale: 1 }
