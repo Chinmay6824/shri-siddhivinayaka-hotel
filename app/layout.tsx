@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: 'Shri Siddhivinayaka Hotel & Home Food | Best Hotel & Seafood in Gokarna',
   description:
     'Discover Shri Siddhivinayaka Hotel & Home Food in Ganjigadde, Gokarna. Rated for authentic coastal seafood thalis, kingfish fry, homestay ambience, and warm Karavali hospitality.',
-  applicationName: 'Shri Siddhivinayaka Hotel Gokarna',
+  applicationName: 'Shri Siddhivinayaka Home Food',
   authors: [{ name: 'Shri Siddhivinayaka Hotel' }],
   creator: 'Shri Siddhivinayaka Hotel',
   publisher: 'Shri Siddhivinayaka Hotel',

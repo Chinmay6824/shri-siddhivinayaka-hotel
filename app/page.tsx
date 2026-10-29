@@ -9,10 +9,10 @@ import { hotelFaqs, restaurant } from '@/lib/restaurant'
 const websiteStructuredData = {
   '@context': 'https://schema.org',
   '@type': 'WebSite',
-  name: 'Shri Siddhivinayaka Hotel',
+  name: 'Shri Siddhivinayaka Home Food',
   alternateName: [
+    'Shri Siddhivinayaka Hotel',
     'Shri Siddhivinayaka Hotel & Home Food',
-    'Shri Siddhivinayaka Home Food',
     'Siddhivinayaka Hotel Gokarna',
   ],
   url: 'https://shri-siddhivinayaka-hotel.github.io/',
