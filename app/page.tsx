@@ -6,6 +6,18 @@ import { OurStory, SiteFooter, TheStayAmbience, VisitUs } from '@/components/res
 import { MobileQuickBar } from '@/components/restaurant/mobile-quick-bar'
 import { hotelFaqs, restaurant } from '@/lib/restaurant'
 
+const websiteStructuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Shri Siddhivinayaka Hotel',
+  alternateName: [
+    'Shri Siddhivinayaka Hotel & Home Food',
+    'Shri Siddhivinayaka Home Food',
+    'Siddhivinayaka Hotel Gokarna',
+  ],
+  url: 'https://shri-siddhivinayaka-hotel.github.io/',
+}
+
 const hotelStructuredData = {
   '@context': 'https://schema.org',
   '@type': ['Hotel', 'Restaurant', 'BedAndBreakfast'],
@@ -97,6 +109,10 @@ export default function Page() {
       </main>
       <SiteFooter />
       <MobileQuickBar />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData).replace(/</g, '\\u003c') }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(hotelStructuredData).replace(/</g, '\\u003c') }}
